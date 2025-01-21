@@ -1,17 +1,21 @@
 @echo off
-fltmc > nul || (echo ÇëÒÔ¹ÜÀíÔ±Éí·ÝÔËÐÐ & pause > nul & exit)
-cd /d %~dp0
+REM è®¾ç½®ç¼–ç æ ¼å¼ä¸º UTF-8
+chcp 65001 >nul
 
-::Í£Ö¹aria2·þÎñ
-aria2-winsw.exe stop
+REM æ£€æŸ¥æ˜¯å¦ä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œ
+fltmc >nul 2>&1 || (
+    echo è¯·ä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œæ­¤è„šæœ¬ï¼
+    pause >nul
+    exit /b
+)
 
-::É¾³ýaria2·þÎñ
-aria2-winsw.exe uninstall
+REM åœæ­¢å¹¶åˆ é™¤ Aria2 æœåŠ¡
 
+echo [1/2]åœæ­¢ Aria2 æœåŠ¡...
+sc stop Aria2Service >nul
 
-::É¾³ý°²×°Ä¿Â¼
-set current_dir="%~dp0"
-cd ..
-echo ½«É¾³ýµ±Ç°Ä¿Â¼£¬°´ÈÎÒâ¼ü¼ÌÐø£¬¹Ø±Õ´°¿ÚÔòÈ¡Ïû
-pause > nul
-rmdir /Q /S %current_dir% & echo Ð¶ÔØÍê±Ï£¬°´ÈÎÒâ¼üÍË³ö & pause > nul & exit
+echo [2/2]åˆ é™¤ Aria2 æœåŠ¡...
+sc delete Aria2Service >nul
+
+echo æ‰§è¡Œå®Œæ¯•ï¼ŒæŒ‰ä»»æ„é”®é€€å‡º...
+pause >nul

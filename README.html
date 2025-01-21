@@ -3,18 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <title>aria2 - The ultra fast download utility</title>
 <style type="text/css">
 
 /*
 :Author: David Goodger (goodger@python.org)
-:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Id: $Id: html4css1.css 8954 2022-01-20 10:10:25Z milde $
 :Copyright: This stylesheet has been placed in the public domain.
 
 Default cascading style sheet for the HTML output of Docutils.
 
-See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+See https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for how to
 customize this style sheet.
 */
 
@@ -379,7 +379,7 @@ downloaded from HTTP(S)/FTP/SFTP is uploaded to the BitTorrent
 swarm. Using Metalink's chunk checksums, aria2 automatically validates
 chunks of data while downloading a file like BitTorrent.</p>
 <p>The project page is located at <a class="reference external" href="https://aria2.github.io/">https://aria2.github.io/</a>.</p>
-<p>See <a class="reference external" href="https://aria2.github.io/manual/en/html/">aria2 Online Manual</a> (<a class="reference external" href="https://aria2.github.io/manual/ru/html/">Russian translation</a>, <a class="reference external" href="https://aria2.github.io/manual/pt/html/">Portuguese
+<p>See the <a class="reference external" href="https://aria2.github.io/manual/en/html/">aria2 Online Manual</a> (<a class="reference external" href="https://aria2.github.io/manual/ru/html/">Russian translation</a>, <a class="reference external" href="https://aria2.github.io/manual/pt/html/">Portuguese
 translation</a>) to learn
 how to use aria2.</p>
 </div>
@@ -403,7 +403,7 @@ how to use aria2.</p>
 <li>Verify peer using given trusted CA certificate in HTTPS</li>
 <li>Client certificate authentication in HTTPS</li>
 <li>Chunked transfer encoding support</li>
-<li>Load Cookies from file using the Firefox3 format, Chromium/Google Chrome
+<li>Load Cookies from the file using the Firefox3 format, Chromium/Google Chrome
 and the Mozilla/Firefox
 (1.x/2.x)/Netscape format.</li>
 <li>Save Cookies in the Mozilla/Firefox (1.x/2.x)/Netscape format.</li>
@@ -414,7 +414,7 @@ and the Mozilla/Firefox
 <li>BitTorrent extensions: Fast extension, DHT, PEX, MSE/PSE,
 Multi-Tracker, UDP tracker</li>
 <li>BitTorrent <a class="reference external" href="http://getright.com/seedtorrent.html">WEB-Seeding</a>.
-aria2 requests chunks more than piece size to reduce the request
+aria2 requests chunk more than piece size to reduce the request
 overhead. It also supports pipelined requests with piece size.</li>
 <li>BitTorrent Local Peer Discovery</li>
 <li>Rename/change the directory structure of BitTorrent downloads
@@ -435,25 +435,25 @@ directory and output file name can be specified optionally</li>
 </div>
 <div class="section" id="versioning-and-release-schedule">
 <h1>Versioning and release schedule</h1>
-<p>We use 3 numbers for aria2 version: MAJOR.MINOR.PATCH.  We will ship
-MINOR update on 15th of every month.  We may skip a release if we have
-no changes since the last release.  The feature and documentation
-freeze happens 10 days before the release day (5th day of the month)
+<p>We use 3 numbers for the aria2 version: MAJOR.MINOR.PATCH.  We will ship
+MINOR updates on the 15th of every month.  We may skip a release if we have
+had no changes since the last release.  The feature and documentation
+freeze happens 10 days before the release day (the 5th day of the month)
 for translation teams.  We will raise an issue about the upcoming
 release around that day.</p>
 <p>We may release PATCH releases between regular releases if we have
 security issues.</p>
-<p>MAJOR version will stay at 1 for the time being.</p>
+<p>The MAJOR version will stay at 1 for the time being.</p>
 </div>
 <div class="section" id="how-to-get-source-code">
 <h1>How to get source code</h1>
 <p>We maintain the source code at Github:
 <a class="reference external" href="https://github.com/aria2/aria2">https://github.com/aria2/aria2</a></p>
-<p>To get the latest source code, run following command:</p>
+<p>To get the latest source code, run the following command:</p>
 <pre class="literal-block">
 $ git clone https://github.com/aria2/aria2.git
 </pre>
-<p>This will create aria2 directory in your current directory and source
+<p>This will create an aria2 directory in your current directory and source
 files are stored there.</p>
 </div>
 <div class="section" id="dependency">
@@ -510,22 +510,22 @@ If you prefer Expat, run configure with <tt class="docutils literal"><span class
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>On Apple OSX the OS-level SSL/TLS support will be preferred. Hence
-neither GnuTLS nor OpenSSL are required on that platform. If you'd
+<p>On Apple OSX, OS-level SSL/TLS support will be preferred. Hence
+neither GnuTLS nor OpenSSL is required on that platform. If you'd
 like to disable this behavior, run configure with
 <tt class="docutils literal"><span class="pre">--without-appletls</span></tt>.</p>
 <p>GnuTLS has precedence over OpenSSL if both libraries are installed.
 If you prefer OpenSSL, run configure with <tt class="docutils literal"><span class="pre">--without-gnutls</span></tt>
 <tt class="docutils literal"><span class="pre">--with-openssl</span></tt>.</p>
-<p class="last">On Windows there is SSL implementation available that is based on
+<p class="last">On Windows, there is SSL implementation available that is based on
 the native Windows SSL capabilities (Schannel) and it will be
-preferred.  Hence neither GnuTLS nor OpenSSL are required on that
+preferred.  Hence neither GnuTLS nor OpenSSL is required on that
 platform.  If you'd like to disable this behavior, run configure
 with <tt class="docutils literal"><span class="pre">--without-wintls</span></tt>.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>On Apple OSX the OS-level checksum support will be preferred,
+<p>On Apple OSX, the OS-level checksum support will be preferred,
 unless aria2 is configured with <tt class="docutils literal"><span class="pre">--without-appletls</span></tt>.</p>
 <p>libnettle has precedence over libgcrypt if both libraries are
 installed.  If you prefer libgcrypt, run configure with
@@ -533,7 +533,7 @@ installed.  If you prefer libgcrypt, run configure with
 GnuTLS, neither libnettle nor libgcrypt will be used.</p>
 <p>If none of the optional dependencies are installed, an internal
 implementation that only supports md5 and sha1 will be used.</p>
-<p class="last">On Windows there is SSL implementation available that is based on
+<p class="last">On Windows, there is SSL implementation available that is based on
 the native Windows capabilities and it will be preferred, unless
 aria2 is configured with <tt class="docutils literal"><span class="pre">--without-wintls</span></tt>.</p>
 </div>
@@ -549,19 +549,19 @@ libraries:</p>
 <p>You can disable BitTorrent and Metalink support by providing
 <tt class="docutils literal"><span class="pre">--disable-bittorrent</span></tt> and <tt class="docutils literal"><span class="pre">--disable-metalink</span></tt> to the configure
 script respectively.</p>
-<p>In order to enable async DNS support, you need c-ares.</p>
+<p>To enable async DNS support, you need c-ares.</p>
 <ul class="simple">
 <li>c-ares: <a class="reference external" href="http://c-ares.haxx.se/">http://c-ares.haxx.se/</a></li>
 </ul>
 </div>
 <div class="section" id="how-to-build">
 <h1>How to build</h1>
-<p>aria2 is primarily written in C++. Initially it was written based on
-C++98/C++03 standard features. We are now migrating aria2 to C++11
-standard. The current source code requires C++11 aware compiler. For
+<p>aria2 is primarily written in C++. Initially, it was written based on
+C++98/C++03 standard features. We are now migrating aria2 to the C++11
+standard. The current source code requires a C++11 aware compiler. For
 well-known compilers, such as g++ and clang, the <tt class="docutils literal"><span class="pre">-std=c++11</span></tt> or
 <tt class="docutils literal"><span class="pre">-std=c++0x</span></tt> flag must be supported.</p>
-<p>In order to build aria2 from the source package, you need following
+<p>To build aria2 from the source package, you need the following
 development packages (package name may vary depending on the
 distribution you use):</p>
 <ul class="simple">
@@ -591,8 +591,8 @@ libgnutls-dev, nettle-dev, libgmp-dev, libgpg-error-dev and libgcrypt-dev:</p>
 </ul>
 <p>On Fedora you need the following packages: gcc, gcc-c++, kernel-devel,
 libgcrypt-devel, libxml2-devel, openssl-devel, gettext-devel, cppunit</p>
-<p>If you downloaded source code from git repository, you have to install
-following packages to get autoconf macros:</p>
+<p>If you downloaded source code from a git repository, you have to install
+the following packages to get autoconf macros:</p>
 <ul class="simple">
 <li>libxml2-dev</li>
 <li>libcppunit-dev</li>
@@ -602,15 +602,15 @@ following packages to get autoconf macros:</p>
 <li>autopoint</li>
 <li>libtool</li>
 </ul>
-<p>And run following command to generate configure script and other files
+<p>And run the following command to generate configure script and other files
 necessary to build the program:</p>
 <pre class="literal-block">
 $ autoreconf -i
 </pre>
-<p>Also you need <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> to build man page.</p>
+<p>Also, you need <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> to build the man page.</p>
 <p>If you are building aria2 for Mac OS X, take a look at
-the make-release-os.mk GNU Make makefile.</p>
-<p>The quickest way to build aria2 is first run configure script:</p>
+the makerelease-osx.mk GNU Make makefile.</p>
+<p>The quickest way to build aria2 is first to run configure script:</p>
 <pre class="literal-block">
 $ ./configure
 </pre>
@@ -633,7 +633,7 @@ If you build with OpenSSL or the recent version of GnuTLS which has
 <tt class="docutils literal">gnutls_certificate_set_x509_system_trust()</tt> function and the
 library is properly configured to locate the system-wide CA
 certificates store, aria2 will automatically load those certificates
-at the startup. If it is not the case, I recommend to supply the path
+at the startup. If it is not the case, I recommend supplying the path
 to the CA bundle file. For example, in Debian the path to CA bundle
 file is '/etc/ssl/certs/ca-certificates.crt' (in ca-certificates
 package). This may vary depending on your distribution. You can give
@@ -644,9 +644,9 @@ $ make
 </pre>
 <p>Without <tt class="docutils literal"><span class="pre">--with-ca-bundle</span></tt> option, you will encounter the error when
 accessing HTTPS servers because the certificate cannot be verified
-without CA bundle. In such case, you can specify the CA bundle file
-using aria2's <tt class="docutils literal"><span class="pre">--ca-certificate</span></tt> option.  If you don't have CA bundle
-file installed, then the last resort is disable the certificate
+without the CA bundle. In such a case, you can specify the CA bundle file
+using aria2's <tt class="docutils literal"><span class="pre">--ca-certificate</span></tt> option.  If you don't have the CA bundle
+file installed, then the last resort is to disable the certificate
 validation using <tt class="docutils literal"><span class="pre">--check-certificate=false</span></tt>.</p>
 <p>Using the native OSX (AppleTLS) and/or Windows (WinTLS) implementation
 will automatically use the system certificate store, so
@@ -656,7 +656,7 @@ these implementations.</p>
 the directory <tt class="docutils literal">$prefix/share/doc/aria2/bash_completion</tt>.  To change
 the install directory of the file, use <tt class="docutils literal"><span class="pre">--with-bashcompletiondir</span></tt>
 option.</p>
-<p>After a <tt class="docutils literal">make</tt> the executable is located at <tt class="docutils literal">src/aria2c</tt>.</p>
+<p>After a <tt class="docutils literal">make</tt>, the executable is located at <tt class="docutils literal">src/aria2c</tt>.</p>
 <p>aria2 uses CppUnit for automated unit testing. To run the unit test:</p>
 <pre class="literal-block">
 $ make check
@@ -668,18 +668,18 @@ $ make check
 mingw-w64 (<a class="reference external" href="http://mingw-w64.org/doku.php">http://mingw-w64.org/doku.php</a>) cross-compiler on Debian
 Linux. The MinGW (<a class="reference external" href="http://www.mingw.org/">http://www.mingw.org/</a>) may not be able to build
 aria2.</p>
-<p>The easiest way to build Windows binary is use Dockerfile.mingw.  See
-Dockerfile.mingw how to build binary.  If you cannot use Dockerfile,
-then continue to read following paragraphs.</p>
+<p>The easiest way to build Windows binary is using Dockerfile.mingw.  See
+Dockerfile.mingw how to build a binary.  If you cannot use Dockerfile,
+then continue to read the following paragraphs.</p>
 <p>Basically, after compiling and installing depended libraries, you can
 do cross-compile just passing appropriate <tt class="docutils literal"><span class="pre">--host</span></tt> option and
-specifying <tt class="docutils literal">CPPFLAGS</tt>, <tt class="docutils literal">LDFLAGS</tt> and <tt class="docutils literal">PKG_CONFIG_LIBDIR</tt>
-variables to configure. For convenience and lowering our own
-development cost, we provide easier way to configure the build
+specifying <tt class="docutils literal">CPPFLAGS</tt>, <tt class="docutils literal">LDFLAGS</tt>, and <tt class="docutils literal">PKG_CONFIG_LIBDIR</tt>
+variables to configure. For convenience and to lower our own
+development cost, we provide an easier way to configure the build
 settings.</p>
 <p><tt class="docutils literal"><span class="pre">mingw-config</span></tt> script is a configure script wrapper for mingw-w64.
 We use it to create official Windows build.  This script assumes
-following libraries have been built for cross-compile:</p>
+the following libraries have been built for cross-compile:</p>
 <ul class="simple">
 <li>c-ares</li>
 <li>expat</li>
@@ -692,7 +692,7 @@ following libraries have been built for cross-compile:</p>
 <dl class="docutils">
 <dt><tt class="docutils literal">HOST</tt></dt>
 <dd>cross-compile to build programs to run on <tt class="docutils literal">HOST</tt>. It defaults to
-<tt class="docutils literal"><span class="pre">i686-w64-mingw32</span></tt>. To build 64bit binary, specify
+<tt class="docutils literal"><span class="pre">i686-w64-mingw32</span></tt>. To build a 64bit binary, specify
 <tt class="docutils literal"><span class="pre">x86_64-w64-mingw32</span></tt>.</dd>
 <dt><tt class="docutils literal">PREFIX</tt></dt>
 <dd>Prefix to the directory where dependent libraries are installed.  It
@@ -701,7 +701,7 @@ added to <tt class="docutils literal">CPPFLAGS</tt>. <tt class="docutils literal
 <tt class="docutils literal">LDFLAGS</tt>. <tt class="docutils literal">$PREFIX/lib/pkgconfig</tt> will be set to
 <tt class="docutils literal">PKG_CONFIG_LIBDIR</tt>.</dd>
 </dl>
-<p>For example, to build 64bit binary do this:</p>
+<p>For example, to build a 64bit binary do this:</p>
 <pre class="literal-block">
 $ HOST=x86_64-w64-mingw32 ./mingw-config
 </pre>
@@ -713,10 +713,10 @@ libraries.</p>
 <h1>Cross-compiling Android binary</h1>
 <p>In this section, we describe how to build Android binary using Android
 NDK cross-compiler on Debian Linux.</p>
-<p>At the time of this writing, android-ndk-r14b should compile aria2
+<p>At the time of this writing, Android NDK r21e should compile aria2
 without errors.</p>
 <p><tt class="docutils literal"><span class="pre">android-config</span></tt> script is a configure script wrapper for Android
-build.  We use it to create official Android build.  This script
+build.  We use it to create an official Android build.  This script
 assumes the following libraries have been built for cross-compile:</p>
 <ul class="simple">
 <li>c-ares</li>
@@ -728,36 +728,21 @@ assumes the following libraries have been built for cross-compile:</p>
 <p>When building the above libraries, make sure that disable shared
 library and enable only static library. We are going to link those
 libraries statically.</p>
-<p>We use zlib which comes with Android NDK, so we don't have to build it
-by ourselves.</p>
-<p><tt class="docutils literal"><span class="pre">android-config</span></tt> assumes the existence of <tt class="docutils literal">$ANDROID_HOME</tt>
-environment variable which must fulfill the following conditions:</p>
-<ul>
-<li><p class="first">Android NDK toolchain is installed under
-<tt class="docutils literal">$ANDROID_HOME/toolchain</tt>.  Refer to <a class="reference external" href="https://developer.android.com/ndk/guides/standalone_toolchain.html">Standalone Toolchain</a>
-for more details, but it is a bit out of date.</p>
-<p>To install toolchain under <tt class="docutils literal">$ANDROID_HOME/toolchain</tt>, do this:</p>
-<pre class="code text literal-block">
-$NDK/build/tools/make_standalone_toolchain.py \
-   --arch arm --api 16 --stl=gnustl \
-   --install-dir $ANDROID_HOME/toolchain
-</pre>
-</li>
-<li><p class="first">The dependent libraries must be installed under
+<p><tt class="docutils literal"><span class="pre">android-config</span></tt> assumes that <tt class="docutils literal">$ANDROID_HOME</tt> and <tt class="docutils literal">$NDK</tt>
+environment variables are defined.</p>
+<p>We currently use Android NDK r21e.  <tt class="docutils literal">$NDK</tt> should point to the
+directory to Android NDK.  The build tools will be found under
+<tt class="docutils literal"><span class="pre">$NDK/toolchains/llvm/prebuilt/linux-x86_64/bin/</span></tt>.</p>
+<p>All the dependent libraries must be installed under
 <tt class="docutils literal">$ANDROID_HOME/usr/local</tt>.</p>
-</li>
-</ul>
-<p>Before running <tt class="docutils literal"><span class="pre">android-config</span></tt> and <tt class="docutils literal"><span class="pre">android-make</span></tt>,
-<tt class="docutils literal">$ANDROID_HOME</tt> environment variable must be set to point to the
-correct path.</p>
-<p>After <tt class="docutils literal"><span class="pre">android-config</span></tt>, run <tt class="docutils literal"><span class="pre">android-make</span></tt> to compile sources.</p>
+<p>After <tt class="docutils literal"><span class="pre">android-config</span></tt>, run <tt class="docutils literal">make</tt> to compile sources.</p>
 </div>
 <div class="section" id="building-documentation">
 <h1>Building documentation</h1>
-<p><a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> is used to build the
+<p><a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> is used to building the
 documentation. aria2 man pages will be build when you run <tt class="docutils literal">make</tt> if
-they are not up-to-date.  You can also build HTML version of aria2 man
-page by <tt class="docutils literal">make html</tt>. The HTML version manual is also available at
+they are not up-to-date.  You can also build an HTML version of the aria2
+man page by <tt class="docutils literal">make html</tt>. The HTML version manual is also available
 <a class="reference external" href="https://aria2.github.io/manual/en/html/">online</a> (<a class="reference external" href="https://aria2.github.io/manual/ru/html/">Russian
 translation</a>, <a class="reference external" href="https://aria2.github.io/manual/pt/html/">Portuguese
 translation</a>).</p>
@@ -769,8 +754,8 @@ translation</a>).</p>
 <p>The file name of the downloaded file is determined as follows:</p>
 <dl class="docutils">
 <dt>single-file mode</dt>
-<dd>If &quot;name&quot; key is present in .torrent file, file name is the value
-of &quot;name&quot; key. Otherwise, file name is the base name of .torrent
+<dd>If &quot;name&quot; key is present in .torrent file, the file name is the value
+of &quot;name&quot; key. Otherwise, the file name is the base name of .torrent
 file appended by &quot;.file&quot;. For example, .torrent file is
 &quot;test.torrent&quot;, then file name is &quot;test.torrent.file&quot;.  The
 directory to store the downloaded file can be specified by -d
@@ -792,13 +777,13 @@ The number of files to open simultaneously can be controlled by
 for IPv4 DHT is saved to <tt class="docutils literal">$XDG_CACHE_HOME/aria2/dht.dat</tt> and the
 routing table for IPv6 DHT is saved to
 <tt class="docutils literal">$XDG_CACHE_HOME/aria2/dht6.dat</tt> unless files exist at
-<tt class="docutils literal"><span class="pre">$HOME/.aria2/dht.dat</span></tt> or <tt class="docutils literal"><span class="pre">$HOME/.aria2/dht6.dat</span></tt>. aria2 uses same
-port number to listen on for both IPv4 and IPv6 DHT.</p>
+<tt class="docutils literal"><span class="pre">$HOME/.aria2/dht.dat</span></tt> or <tt class="docutils literal"><span class="pre">$HOME/.aria2/dht6.dat</span></tt>. aria2 uses the
+same port number to listen on for both IPv4 and IPv6 DHT.</p>
 </div>
 <div class="section" id="udp-tracker">
 <h2>UDP tracker</h2>
 <p>UDP tracker support is enabled when IPv4 DHT is enabled.  The port
-number of UDP tracker is shared with DHT. Use <tt class="docutils literal"><span class="pre">--dht-listen-port</span></tt>
+number of the UDP tracker is shared with DHT. Use <tt class="docutils literal"><span class="pre">--dht-listen-port</span></tt>
 option to change the port number.</p>
 </div>
 <div class="section" id="other-things-should-be-noted">
@@ -812,9 +797,9 @@ and UDP.</li>
 <li>aria2 doesn't configure port-forwarding automatically. Please
 configure your router or firewall manually.</li>
 <li>The maximum number of peers is 55. This limit may be exceeded when
-download rate is low. This download rate can be adjusted using
+the download rate is low. This download rate can be adjusted using
 <tt class="docutils literal"><span class="pre">--bt-request-peer-speed-limit</span></tt> option.</li>
-<li>As of release 0.10.0, aria2 stops sending request message after
+<li>As of release 0.10.0, aria2 stops sending request messages after
 selective download completes.</li>
 </ul>
 </div>
@@ -824,40 +809,40 @@ selective download completes.</li>
 <p>The current implementation supports HTTP(S)/FTP/SFTP/BitTorrent.  The
 other P2P protocols are ignored. Both Metalink4 (RFC 5854) and
 Metalink version 3.0 documents are supported.</p>
-<p>For checksum verification, md5, sha-1, sha-224, sha-256, sha-384 and
+<p>For checksum verification, md5, sha-1, sha-224, sha-256, sha-384, and
 sha-512 are supported. If multiple hash algorithms are provided, aria2
-uses stronger one. If whole file checksum verification fails, aria2
-doesn't retry the download and just exits with non-zero return code.</p>
+uses a stronger one. If whole file checksum verification fails, aria2
+doesn't retry the download and just exits with a non-zero return code.</p>
 <p>The supported user preferences are version, language, location,
-protocol and os.</p>
-<p>If chunk checksums are provided in Metalink file, aria2 automatically
+protocol, and os.</p>
+<p>If chunk checksums are provided in the Metalink file, aria2 automatically
 validates chunks of data during download. This behavior can be turned
 off by a command-line option.</p>
-<p>If signature is included in a Metalink file, aria2 saves it as a file
+<p>If a signature is included in a Metalink file, aria2 saves it as a file
 after the completion of the download.  The file name is download
-file name + &quot;.sig&quot;. If same file already exists, the signature file is
+file name + &quot;.sig&quot;. If the same file already exists, the signature file is
 not saved.</p>
-<p>In Metalink4, multi-file torrent could appear in metalink:metaurl
+<p>In Metalink4, a multi-file torrent could appear in metalink:metaurl
 element.  Since aria2 cannot download 2 same torrents at the same
-time, aria2 groups files in metalink:file element which has same
-BitTorrent metaurl and downloads them from a single BitTorrent swarm.
-This is basically multi-file torrent download with file selection, so
-the adjacent files which is not in Metalink document but shares same
-piece with selected file are also created.</p>
+time, aria2 groups files in metalink:file element which has the same
+BitTorrent metaurl, and downloads them from a single BitTorrent swarm.
+This is a basically multi-file torrent download with file selection, so
+the adjacent files which are not in Metalink document but share the same
+piece with the selected file are also created.</p>
 <p>If relative URI is specified in metalink:url or metalink:metaurl
 element, aria2 uses the URI of Metalink file as base URI to resolve
-the relative URI. If relative URI is found in Metalink file which is
-read from local disk, aria2 uses the value of <tt class="docutils literal"><span class="pre">--metalink-base-uri</span></tt>
+the relative URI. If relative URI is found in the Metalink file which is
+read from the local disk, aria2 uses the value of <tt class="docutils literal"><span class="pre">--metalink-base-uri</span></tt>
 option as base URI. If this option is not specified, the relative URI
 will be ignored.</p>
 </div>
 <div class="section" id="metalink-http">
 <h1>Metalink/HTTP</h1>
-<p>The current implementation only uses rel=duplicate links only.  aria2
+<p>The current implementation only uses rel=duplicate links.  aria2
 understands Digest header fields and check whether it matches the
-digest value from other sources. If it differs, drop connection.
+digest value from other sources. If it differs, drop the connection.
 aria2 also uses this digest value to perform checksum verification
-after download finished. aria2 recognizes geo value. To tell aria2
+after the download is finished. aria2 recognizes geo value. To tell aria2
 which location you prefer, you can use <tt class="docutils literal"><span class="pre">--metalink-location</span></tt> option.</p>
 </div>
 <div class="section" id="netrc">
@@ -873,10 +858,10 @@ defined in RFC 6455. The supported protocol version is 13.</p>
 </div>
 <div class="section" id="libaria2">
 <h1>libaria2</h1>
-<p>The libaria2 is a C++ library which offers aria2 functionality to the
+<p>The libaria2 is a C++ library that offers aria2 functionality to the
 client code. Currently, libaria2 is not built by default. To enable
 libaria2, use <tt class="docutils literal"><span class="pre">--enable-libaria2</span></tt> configure option.  By default,
-only the shared library is built. To build static library, use
+only the shared library is built. To build a static library, use
 <tt class="docutils literal"><span class="pre">--enable-static</span></tt> configure option as well. See libaria2
 documentation to know how to use API.</p>
 </div>
