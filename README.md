@@ -13,12 +13,15 @@ Aria2 超·懒人包，一键配置Aria2。注册Aria2后台进程为系统服�
 1. 解压目录下的 `Aria2.zip`，并将解压后的文件夹 `Aria2` 复制到想要安装的位置。
 2. 右键以管理员模式运行 `install.bat`，等待脚本执行完毕，`aria2` 服务即安装成功。
 3. 在任务管理器的“详细信息”中，查看“服务”部分，可以看到 `aria2` 服务正在运行。
-4. `aria2` 管理界面可以使用网页版 `AriaNg`（位于 `AriaNg-1.3.8-AllInOne` 文件夹下的 `html` 文件），或浏览器插件 `Aria2 Explorer` 等。
+
+### 使用
+
+`aria2` 管理界面可以使用网页版 `AriaNg`（位于 `AriaNg-1.3.8-AllInOne` 文件夹下的 `html` 文件），或浏览器插件 `Aria2 Explorer` 等。
 
 ### 卸载
 
 1. 右键以管理员模式运行 `uninstall.bat`，等待脚本执行完毕，`aria2` 服务即卸载成功。
-2. 可根据需要选择是否清除 `Aria2` 文件夹，也可以手动删除。
+2. 然后手动删除文件夹 `Aria2` 即可。
 
 ## 程序修改
 
@@ -41,14 +44,13 @@ Aria2 超·懒人包，一键配置Aria2。注册Aria2后台进程为系统服�
 1. 若有需求，打开并修改 `Aria2` 目录下的 `aria2.conf` 文件即可，具体参数可见参考资料5、参考资料6。
 2. 在任务管理器的“详细信息”中，选中 `aria2` 服务，右键重新启动。
 
-### 编辑 winsw 配置
+### 编辑 shawl 命令
 
-1. 若有需求，打开并修改 `Aria2` 目录下的 `aria2-winsw.xml` 文件即可，具体参数可见参考资料7、参考资料8。
-2. 在任务管理器的“详细信息”中，选中 `aria2` 服务，右键重新启动。
+`shawl` 和 `winsw` 不一样，不采用配置文件的方式，而是直接执行含参命令即可创建服务。如果需要修改命令，直接在`install.bat`中添加参数即可，具体参数可见参考资料7。
 
 ### trackers 更新
 
-1. `trackers` 服务器地址可见参考资料9。
+1. `trackers` 服务器地址可见参考资料8。
 2. 手动更新：打开并修改 `Aria2` 目录下的 `aria2.conf` 文件，在 `bt-tracker=` 后添加 `trackers` 服务器地址，用逗号分隔。
 
    自动更新：选中 `Aria2` 目录下的 `RenewTrackers.ps1` 文件，右键使用 `PowerShell` 运行。
@@ -57,7 +59,7 @@ Aria2 超·懒人包，一键配置Aria2。注册Aria2后台进程为系统服�
 ## 下载功能
 
 1. 可配合 `Aria2 Explorer` 浏览器插件，接管 HTTP 下载。
-2. 可配合参考资料10里的脚本，直链下载网盘文件，使用方法见网页。
+2. 可配合参考资料9里的脚本，直链下载网盘文件，使用方法见网页。
 3. 可添加磁链或种子，进行 BT 下载。
 
 ## 参考资料
@@ -68,10 +70,9 @@ Aria2 超·懒人包，一键配置Aria2。注册Aria2后台进程为系统服�
 4. [AriaNg](https://github.com/mayswind/AriaNg)
 5. [关于aria2最完整的一篇](http://ivo-wang.github.io/2019/04/18/%E5%85%B3%E4%BA%8Earia2%E6%9C%80%E5%AE%8C%E6%95%B4%E7%9A%84%E4%B8%80%E7%AF%87/)
 6. [Aria2配置文件参数翻译详解](http://www.senra.me/aria2-conf-file-parameters-translation-and-explanation/)
-7. [使用winsw部署Windows服务](https://segmentfault.com/a/1190000019520072)
-8. [winsw - Windows Service Wrapper in a permissive license](https://github.com/winsw/winsw)
-9. [ngosang/trackerslist](https://github.com/ngosang/trackerslist)
-10. [网盘直链下载助手](https://www.baiduyun.wiki/)
+7. [Shawl-Windows service wrapper for arbitrary commands](https://github.com/mtkennerly/shawl/blob/master/docs/cli.md)
+8. [ngosang/trackerslist](https://github.com/ngosang/trackerslist)
+9. [网盘直链下载助手](https://www.baiduyun.wiki/)
 
 ## 一些说明
 
@@ -83,5 +84,5 @@ Aria2 超·懒人包，一键配置Aria2。注册Aria2后台进程为系统服�
 2. 更新 `AriaNg` 到 `1.3.8` 版本，不过更推荐采用浏览器插件进行管理。
 3. 修改 `aria2.conf` 配置文件，增加下载线程、添加详细注释等。
 4. 添加最新 `trackers` 服务器，并添加 `trackers` 自动更新脚本。
-5. 修改 `aria2-winsw.xml` 配置文件，限制日志文件大小。
+5. 改为使用`shawl`来创建系统服务。
 6. 添加 `dht.dat` 和 `dht6.dat` 文件，方便找到 `dht` 网络。
