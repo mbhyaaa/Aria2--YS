@@ -16,7 +16,7 @@ set CURRENT_DIR=%~dp0
 REM 创建 Aria2 服务，并设置开机自动运行
 
 echo [1/3]创建 Aria2 服务...
-%CURRENT_DIR%shawl.exe add --name Aria2Service --cwd %CURRENT_DIR% --no-log-cmd -- %CURRENT_DIR%aria2c.exe --conf-path=aria2.conf
+"%CURRENT_DIR%shawl.exe" add --no-log-cmd --name Aria2Service --cwd "%CURRENT_DIR%." -- "%CURRENT_DIR%aria2c.exe" --conf-path=aria2.conf
 
 echo [2/3]设置 Aria2 服务开机自动运行...
 sc config Aria2Service start= auto >nul
